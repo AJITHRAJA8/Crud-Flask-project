@@ -62,6 +62,7 @@ def update(id):
     result=res.fetchone()
     return render_template("update.html",datas=result)
 
+#delete user using ID
 @app.route('/delete/<string:id>',methods=['GET','POST'])
 def delete(id):
         res=con.cursor(dictionary=True)
