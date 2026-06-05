@@ -2,9 +2,20 @@
 <html>
     <head>
         <title>Crud Opeartion</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
     </head>
     <body>
         <h1>User Mangement System using Flask & MySQL</h1>
+
+        <h4>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        {{message}}
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </h4>
         <p>
             <a href="{{url_for('add_user')}}">Add User</a>
         </p>
@@ -23,6 +34,8 @@
                 <td>{{data.Name}}</td>
                 <td>{{data.Age}}</td>
                 <td>{{data.City}}</td>
+                <td><a  href="{{url_for('update',id=data.ID)}}">Update</a></td>
+                <td><a onclick="return confirm('Are You Sure to Delete');" href="{{url_for('delete',id=data.ID)}}">Delete</a></td>
             </tr>
             {% endfor %}
         </table>
