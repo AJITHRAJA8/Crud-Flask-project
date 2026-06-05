@@ -8,7 +8,7 @@ app=Flask(__name__)
 con=mysql.connector.connect(
     host = "localhost",
     user = "root",
-    password = "@Ajith@9751",
+    password = "your_pass",
     database = "crud"
 )
 if con.is_connected():
