@@ -43,7 +43,7 @@ To understand how a real-world web application performs database operations usin
 
 ## 👨‍💻 Developer
 
-**Ajith Kumar**
+**Ajith**
 
 🌟 Learning Python Backend Development
 🌟 Building Real-World Projects
